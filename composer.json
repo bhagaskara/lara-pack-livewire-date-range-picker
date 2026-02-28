@@ -1,26 +1,26 @@
 {
-    "name": "lara-pack/livewire-date-range-picker",
-    "description": "Livewire Component : Date Range Picker",
-    "license": "MIT",
-    "require": {
-        "livewire/livewire": "^3.0"
-    },
-    "autoload": {
-        "psr-4": {
-            "LaraPack\\LivewireDateRangePicker\\": "src/"
-        }
-    },
-    "authors": [
-        {
-            "name": "Bhagaskara",
-            "email": "bhagaskaraliancer@gmail.com"
-        }
-    ],
-    "extra": {
-        "laravel": {
-            "providers": [
-                "LaraPack\\LivewireDateRangePicker\\LivewireDateRangePickerProvider"
-            ]
-        }
+  "name": "lara-pack/livewire-date-range-picker",
+  "description": "Livewire Component : Date Range Picker",
+  "license": "MIT",
+  "require": {
+    "livewire/livewire": "^3.0 || ^4.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "LaraPack\\LivewireDateRangePicker\\": "src/"
     }
+  },
+  "authors": [
+    {
+      "name": "Bhagaskara",
+      "email": "bhagaskaraliancer@gmail.com"
+    }
+  ],
+  "extra": {
+    "laravel": {
+      "providers": [
+        "LaraPack\\LivewireDateRangePicker\\LivewireDateRangePickerProvider"
+      ]
+    }
+  }
 }
