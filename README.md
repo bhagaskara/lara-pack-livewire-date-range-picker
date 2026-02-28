@@ -4,30 +4,30 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/lara-pack/livewire-date-range-picker.svg?style=flat-square)](https://packagist.org/packages/lara-pack/livewire-date-range-picker)
 [![License](https://img.shields.io/packagist/l/lara-pack/livewire-date-range-picker.svg?style=flat-square)](https://packagist.org/packages/lara-pack/livewire-date-range-picker)
 
-Komponen Livewire untuk pemilihan rentang tanggal (**Date Range Picker**) yang modern dan mudah diintegrasikan. Paket ini dirancang untuk bekerja secara mulus dengan **Livewire 3** dan **Livewire 4**.
+A modern and easy-to-integrate **Date Range Picker** component for Livewire. This package is designed to work seamlessly with both **Livewire 3** and **Livewire 4**.
 
-## Fitur ✨
+## Features ✨
 
-- **Kompatibilitas**: Mendukung Livewire 3 & 4.
-- **Dukungan Waktu**: Mendukung pemilih waktu (Time Picker).
-- **Kustomisasi**: Konfigurasi lengkap melalui properti (min/max date, format, locale, dll).
-- **Responsif**: Bekerja baik di berbagai perangkat.
-- **Dukungan Model**: Menggunakan attribute `#[Modelable]` untuk integrasi `wire:model` yang mudah.
+- **Compatibility**: Supports Livewire 3 & 4.
+- **Time Support**: Built-in support for time selection.
+- **Customizable**: Fully configurable via properties (min/max date, format, locale, etc.).
+- **Responsive**: Works perfectly on various devices and screen sizes.
+- **Modelable**: Uses the `#[Modelable]` attribute for seamless `wire:model` integration.
 
-## Instalasi 🚀
+## Installation 🚀
 
-Instal paket melalui Composer:
+Install the package via Composer:
 
 ```bash
 composer require lara-pack/livewire-date-range-picker
 ```
 
-## Persyaratan 📦
+## Requirements 📦
 
-Komponen ini bergantung pada **Bootstrap DateRangePicker**. Anda perlu menyertakan file CSS dan JS berikut di layout Anda (umumnya di `app.blade.php`):
+This component depends on **Bootstrap DateRangePicker**. You need to include the following CSS and JS files in your layout (typically in `app.blade.php`):
 
 ```html
-<!-- Dependensi (jQuery, Moment.js, dan DateRangePicker) -->
+<!-- Dependencies (jQuery, Moment.js, and DateRangePicker) -->
 <script
   type="text/javascript"
   src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"
@@ -47,11 +47,11 @@ Komponen ini bergantung pada **Bootstrap DateRangePicker**. Anda perlu menyertak
 />
 ```
 
-## Penggunaan 🛠️
+## Usage 🛠️
 
-### Penggunaan Dasar
+### Basic Usage
 
-Tambahkan komponen di file Blade Anda:
+Add the component to your Blade view:
 
 ```blade
 <livewire:lara-pack.livewire-date-range-picker
@@ -61,17 +61,17 @@ Tambahkan komponen di file Blade Anda:
 ```
 
 > [!TIP]
-> Pada **Livewire 4**, jika Anda membutuhkan sinkronisasi data seketika, Anda dapat menggunakan `wire:model.live`. Namun, komponen ini sudah menangani sinkronisasi saat rentang tanggal dipilih.
+> In **Livewire 4**, if you require instant data synchronization, you can use `wire:model.live`. However, this component already handles synchronization automatically when a date range is selected.
 
-Di komponen Livewire parent Anda:
+In your parent Livewire component:
 
 ```php
-public $range = []; // Akan berisi ['YYYY-MM-DD', 'YYYY-MM-DD']
+public $range = []; // Will contain ['YYYY-MM-DD', 'YYYY-MM-DD']
 ```
 
-### Konfigurasi Lanjutan
+### Advanced Configuration
 
-Anda dapat menyesuaikan perilaku picker melalui properti yang tersedia:
+You can customize the picker's behavior through the following properties:
 
 ```blade
 <livewire:lara-pack.livewire-date-range-picker
@@ -83,32 +83,32 @@ Anda dapat menyesuaikan perilaku picker melalui properti yang tersedia:
     :autoApply="true"
     :locale="[
         'format' => 'DD/MM/YYYY',
-        'separator' => ' sampai ',
-        'applyLabel' => 'Simpan',
-        'cancelLabel' => 'Batal',
+        'separator' => ' to ',
+        'applyLabel' => 'Apply',
+        'cancelLabel' => 'Cancel',
     ]"
 />
 ```
 
-## Properti yang Tersedia 📝
+## Available Properties 📝
 
-| Properti           | Tipe      | Default   | Deskripsi                             |
-| ------------------ | --------- | --------- | ------------------------------------- |
-| `class`            | `string`  | `''`      | Class CSS untuk elemen input.         |
-| `disabled`         | `boolean` | `false`   | Menonaktifkan input.                  |
-| `minDate`          | `string`  | `null`    | Tanggal minimum.                      |
-| `maxDate`          | `string`  | `null`    | Tanggal maksimum.                     |
-| `showDropdowns`    | `boolean` | `true`    | Tampilkan dropdown bulan dan tahun.   |
-| `timePicker`       | `boolean` | `false`   | Aktifkan pemilihan waktu.             |
-| `timePicker24Hour` | `boolean` | `true`    | Gunakan format 24 jam.                |
-| `opens`            | `string`  | `'right'` | Arah buka: `left`, `right`, `center`. |
-| `drops`            | `string`  | `'down'`  | Arah jatuh: `down`, `up`.             |
-| `autoApply`        | `boolean` | `false`   | Langsung terapkan saat pilih rentang. |
+| Property           | Type      | Default   | Description                                   |
+| ------------------ | --------- | --------- | --------------------------------------------- |
+| `class`            | `string`  | `''`      | CSS class for the input element.              |
+| `disabled`         | `boolean` | `false`   | Disables the input.                           |
+| `minDate`          | `string`  | `null`    | Minimum selectable date.                      |
+| `maxDate`          | `string`  | `null`    | Maximum selectable date.                      |
+| `showDropdowns`    | `boolean` | `true`    | Show year and month select dropdowns.         |
+| `timePicker`       | `boolean` | `false`   | Enable time selection.                        |
+| `timePicker24Hour` | `boolean` | `true`    | Use 24-hour format for the time picker.       |
+| `opens`            | `string`  | `'right'` | Open direction: `left`, `right`, or `center`. |
+| `drops`            | `string`  | `'down'`  | Drop direction: `down` or `up`.               |
+| `autoApply`        | `boolean` | `false`   | Apply the range immediately upon selection.   |
 
-## Kontribusi 🤝
+## Contributing 🤝
 
-Kontribusi sangat disambut! Silakan buka Issue atau kirimkan Pull Request untuk peningkatan fitur atau perbaikan bug.
+Contributions are highly welcome! Feel free to open an Issue or submit a Pull Request for any feature enhancements or bug fixes.
 
-## Lisensi 📜
+## License 📜
 
-Paket ini berlisensi [MIT](LICENSE).
+This package is licensed under the [MIT License](LICENSE).
